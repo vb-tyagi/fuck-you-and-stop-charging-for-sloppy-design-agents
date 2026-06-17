@@ -26,9 +26,9 @@ Most "AI design tools or agents" today feel like paying a $20-50 monthly tax for
 
 One Claude Code skill that does two things:
 
-1. **🔬 Extracts your design taste** — Looks at designs you love, asks you smart questions, generates visual probes, and compiles a 12-section spec with hex codes, font names, px values, and copy-pasteable prompts.
+1. **🔬 Decodes your design taste** — Reads designs you love (screenshots of *any* type — UI, graphic, 3D render, social creative, photo — or live URLs), one reference at a time, asks you smart questions, generates visual probes, and compiles a 12-section spec. Colors are **pinned from real pixels/CSS** (never eyeballed), every claim is **confidence-tiered**, and it captures the *why* behind each choice — not just the what.
 
-2. **🏗️ Builds any UI from that spec** — Landing pages, SaaS dashboards, mobile apps, campaign pages, component libraries — all coded to YOUR aesthetic. Not some generic template. YOUR taste.
+2. **🏗️ Builds any UI from that spec** — Landing pages, SaaS dashboards, mobile apps, campaign pages, component libraries — all coded to YOUR aesthetic. Not some generic template. YOUR taste. And it runs an **anti-slop self-check** before delivering, actively refusing the generic defaults Claude drifts toward (Inter/Roboto, purple-gradient-on-white, card-grid monotony, fake-3D glass).
 
 **Cost:** Whatever you already pay for Claude. That's it.
 
@@ -44,11 +44,12 @@ Refine with 4 more → Get a 12-section taste-spec.md
 ```
 
 The spec includes:
-- 🎨 **Complete hex palette** — not "dark theme" but `#0a0a0b`, `#141416`, `#1e1e21`, `#28282c`
-- 🔤 **Named fonts** — not "expressive sans" but "Space Grotesk (or Plus Jakarta Sans, Outfit)"
+- 🎨 **Pinned hex palette** — real values extracted from the pixels/CSS, not "dark theme" but `#0a0a0b`, `#141416`, `#1e1e21`, `#28282c` — each tagged with a confidence marker
+- 🔤 **Named fonts** — not "expressive sans" but a concrete pairing with alternatives (and never a generic default unless your references genuinely use one)
 - 📐 **Exact spacing** — not "generous" but `16px base, 24px related, 48px section, 96px major`
-- 🚫 **Anti-goals** — bold "Never:" rules that prevent the generic creep
-- 📋 **Two copy-pasteable AI prompts** — one for landing pages, one for product UI
+- 🚫 **Anti-goals** — bold "Never:" rules, including the named AI-slop defaults, that prevent the generic creep
+- 🧭 **The WHY** — the taste rationale (trigger → decision → reason → trade-off) so the spec is transferable, not just descriptive
+- 📋 **Two copy-pasteable AI prompts** — one for image-gen, one for product UI
 
 ### Act II — Unlimited UI Building
 
@@ -97,7 +98,7 @@ Or just:
 | Phase | What Happens | Time |
 |-------|-------------|------|
 | **1. Onboard** | Tell it what you're building + your taste anchors (Apple? Linear? Notion?) | 1 min |
-| **2. References** | Drop screenshots or paste URLs — it analyzes the design DNA | 2-3 min |
+| **2. References** | Drop screenshots (any type) or paste URLs — it decodes each one at a time, pins real colors, reads live CSS where available | 2-3 min |
 | **3. Questionnaire** | 10-15 "would you rather" questions. No jargon. A 16-year-old could answer them. | 3-5 min |
 | **4. Probe Round 1** | 4 complete HTML/CSS pages generated — open them in your browser, rate them | 2-3 min |
 | **5. Probe Round 2** | 4 refined variants based on your feedback — surgical differences | 2-3 min |
